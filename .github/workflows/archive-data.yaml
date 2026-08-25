@@ -15,7 +15,10 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
       - name: Download CSVs
-        run: bash get-csvs.sh
+        run: |
+          for agency in nih ahrq nsf cdc epa samhsa; do
+            wget -b -a wget-log -O data/$agency.csv https://data.grant-witness.us/$agency/dl-table.csv
+          done
       - name: Commit & push changes
         uses: actions-js/push@v1
         with:
