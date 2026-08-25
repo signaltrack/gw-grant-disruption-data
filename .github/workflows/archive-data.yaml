@@ -30,10 +30,15 @@ jobs:
       # - name: Validate CITATION.cff
       #   uses: dieghernan/cff-validator@v5
       
-      # TODO: instead of committing the wget log file, add it as an artifact to the action run
+      - uses: actions/upload-artifact@v7
+        with:
+          name: wget-log
+          path: wget-log
+        
       - name: Commit & push changes
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: Automated data update
+          file_pattern: 'data/*'
       # TODO create release
         
