@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   archive-data:
-    runs-on: ubuntu-latest    
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
         with:
@@ -20,11 +20,16 @@ jobs:
           for agency in nih ahrq nsf cdc epa samhsa; do
             wget -b -a wget-log -O data/$agency.csv https://data.grant-witness.us/$agency/dl-table.csv
           done
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
      
       - name: Update release date
         run: | 
-          sed -e "s|date-released: '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}'|date-released: '$(date +%Y-%m-%d)'|" CITATION.cff > CITATION.cff.tmp &&
+          sed -e "s|date-released: '[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}'|date-released: '$DATE'|" CITATION.cff > CITATION.cff.tmp &&
           mv CITATION.cff.tmp CITATION.cff
+        env:
+          DATE: ${{ steps.date.outputs.date }}
           
       ## Probably not necessary and involves installing R and `cffr` package. 
       # - name: Validate CITATION.cff
@@ -40,5 +45,9 @@ jobs:
         with:
           commit_message: Automated data update
           file_pattern: 'data/*'
-      # TODO create release
+      
+      - name: Create release
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ steps.date.outputs.date }}
         
