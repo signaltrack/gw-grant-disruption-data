@@ -1004,3 +1004,74 @@ Saving to: ‘data/samhsa.csv’
 
 2026-08-25 18:19:46 (116 MB/s) - ‘data/nih.csv’ saved [25365015/25365015]
 
+--2026-08-25 18:42:38--  https://data.grant-witness.us/nih/dl-table.csv
+--2026-08-25 18:42:38--  https://data.grant-witness.us/ahrq/dl-table.csv
+--2026-08-25 18:42:38--  https://data.grant-witness.us/nsf/dl-table.csv
+--2026-08-25 18:42:38--  https://data.grant-witness.us/cdc/dl-table.csv
+--2026-08-25 18:42:38--  https://data.grant-witness.us/epa/dl-table.csv
+--2026-08-25 18:42:38--  https://data.grant-witness.us/samhsa/dl-table.csv
+Resolving data.grant-witness.us (data.grant-witness.us)... Resolving data.grant-witness.us (data.grant-witness.us)... Resolving data.grant-witness.us (data.grant-witness.us)... 172.67.177.246, 104.21.72.85, 2606:4700:3037::6815:4855, ...
+Connecting to data.grant-witness.us (data.grant-witness.us)|172.67.177.246|:443... 172.67.177.246, 104.21.72.85, 2606:4700:3037::6815:4855, ...
+Connecting to data.grant-witness.us (data.grant-witness.us)|172.67.177.246|:443... 104.21.72.85, 172.67.177.246, 2606:4700:3037::6815:4855, ...
+Connecting to data.grant-witness.us (data.grant-witness.us)|104.21.72.85|:443... Resolving data.grant-witness.us (data.grant-witness.us)... 104.21.72.85, 172.67.177.246, 2606:4700:3037::6815:4855, ...
+Connecting to data.grant-witness.us (data.grant-witness.us)|104.21.72.85|:443... Resolving data.grant-witness.us (data.grant-witness.us)... 172.67.177.246, 104.21.72.85, 2606:4700:3037::6815:4855, ...
+Connecting to data.grant-witness.us (data.grant-witness.us)|172.67.177.246|:443... Resolving data.grant-witness.us (data.grant-witness.us)... 104.21.72.85, 172.67.177.246, 2606:4700:3037::6815:4855, ...
+Connecting to data.grant-witness.us (data.grant-witness.us)|104.21.72.85|:443... connected.
+connected.
+connected.
+connected.
+connected.
+connected.
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... 308 Permanent Redirect
+Location: https://data.grantwitness.org/nih/dl-table.csv [following]
+--2026-08-25 18:42:38--  https://data.grantwitness.org/nih/dl-table.csv
+Resolving data.grantwitness.org (data.grantwitness.org)... 308 Permanent Redirect
+Location: https://data.grantwitness.org/ahrq/dl-table.csv [following]
+--2026-08-25 18:42:38--  https://data.grantwitness.org/ahrq/dl-table.csv
+Resolving data.grantwitness.org (data.grantwitness.org)... 308 Permanent Redirect
+Location: https://data.grantwitness.org/samhsa/dl-table.csv [following]
+--2026-08-25 18:42:38--  https://data.grantwitness.org/samhsa/dl-table.csv
+Resolving data.grantwitness.org (data.grantwitness.org)... 308 Permanent Redirect
+Location: https://data.grantwitness.org/epa/dl-table.csv [following]
+--2026-08-25 18:42:38--  https://data.grantwitness.org/epa/dl-table.csv
+Resolving data.grantwitness.org (data.grantwitness.org)... 172.67.185.83, 104.21.32.94, 2606:4700:3035::ac43:b953, ...
+Connecting to data.grantwitness.org (data.grantwitness.org)|172.67.185.83|:443... 172.67.185.83, 104.21.32.94, 2606:4700:3035::ac43:b953, ...
+Connecting to data.grantwitness.org (data.grantwitness.org)|172.67.185.83|:443... 172.67.185.83, 104.21.32.94, 2606:4700:3035::6815:205e, ...
+Connecting to data.grantwitness.org (data.grantwitness.org)|172.67.185.83|:443... 172.67.185.83, 104.21.32.94, 2606:4700:3035::ac43:b953, ...
+Connecting to data.grantwitness.org (data.grantwitness.org)|172.67.185.83|:443... 308 Permanent Redirect
+Location: https://data.grantwitness.org/nsf/dl-table.csv [following]
+--2026-08-25 18:42:38--  https://data.grantwitness.org/nsf/dl-table.csv
+Resolving data.grantwitness.org (data.grantwitness.org)... 104.21.32.94, 172.67.185.83, 2606:4700:3035::6815:205e, ...
+Connecting to data.grantwitness.org (data.grantwitness.org)|104.21.32.94|:443... connected.
+308 Permanent Redirect
+Location: https://data.grantwitness.org/cdc/dl-table.csv [following]
+--2026-08-25 18:42:38--  https://data.grantwitness.org/cdc/dl-table.csv
+Resolving data.grantwitness.org (data.grantwitness.org)... 104.21.32.94, 172.67.185.83, 2606:4700:3035::ac43:b953, ...
+Connecting to data.grantwitness.org (data.grantwitness.org)|104.21.32.94|:443... connected.
+connected.
+connected.
+connected.
+HTTP request sent, awaiting response... connected.
+HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... HTTP request sent, awaiting response... 200 OK
+Length: 847035 (827K) [text/csv]
+Saving to: ‘data/ahrq.csv’
+
+     0K .......... .......... .......... .......... ..........  6% 3.26M 0s
+    50K .......... ....200 OK
+Length: 2125088 (2.0M) [text/csv]
+Saving to: ‘data/epa.csv’
+
+     0K .......... ............ ...... .................. .... .......... .............. ..200 OK
+Length: 25365015 (24M) [text/csv]
+Saving to: ‘data/nih.csv’
+..  2% 3.45M 1s
+    50K ............... .... 12% 1.64M 0s
+   100K ............. .......... .......... .......... ........200 OK
+Length: 7254856 (6.9M) [text/csv]
+Saving to: ‘data/nsf.csv’
+
+     0K .......... .......... .......... .......... ............ ..............  0% 8.20M 1s
+    50K ... ............... ...... ..........  4% 2.30M 1s
+   100K .......... .......... .......... .......... ..........  7% 7.86M 1s
+   150K ............ 18% 1.80M 0s
+   150K .......... .......... ...
