@@ -1,0 +1,51 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Grant Witness Federal Grant Terminations
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Noam
+    family-names: Ross
+    email: noam@grantwitness.org
+    affiliation: Grant Witness
+    orcid: 'https://orcid.org/0000-0002-2136-0000'
+  - given-names: Scott
+    family-names: Delaney
+    email: scott@grantwitness.org
+    affiliation: Grant Witness
+    orcid: 'https://orcid.org/0000-0002-0813-018X'
+  - given-names: Eric R.
+    family-names: Scott
+    email: eric@grantwitness.org
+    affiliation: Grant Witness
+    orcid: 'https://orcid.org/0000-0002-7430-7879'
+  - given-names: Miridula
+    family-names: Shan
+    orcid: 'https://orcid.org/0000-0003-4613-2669'
+  - given-names: Ursula
+    family-names: Kaczmarek
+  - given-names: James
+    family-names: Clawson
+    orcid: 'https://orcid.org/0009-0008-6756-0607'
+  - given-names: Emma
+    family-names: Mairson
+    orcid: 'https://orcid.org/0009-0003-2271-6739'
+url: 'https://grantwitness.org'
+abstract: >-
+  Data on disrupted and restored federal grants compiled by
+  the Grant Witness team.  See grantwitness.org for more on
+  our methods.
+keywords:
+  - NIH
+  - NSF
+  - AHRQ
+  - SAMHSA
+  - EPA
+  - CDC
+  - research funding
+license: CC0-1.0
+date-released: '2026-08-25'
