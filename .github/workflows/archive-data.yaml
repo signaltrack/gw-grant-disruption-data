@@ -4,7 +4,8 @@ on:
 
 name: archive-data.yaml
 
-# permissions: read-all # Not sure if necessary
+permissions: 
+  contents: write
 
 jobs:
   archive-data:
@@ -12,16 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
+          ref: ${{ github.head_ref }}
+
       - name: Download CSVs
         run: |
           for agency in nih ahrq nsf cdc epa samhsa; do
             wget -b -a wget-log -O data/$agency.csv https://data.grant-witness.us/$agency/dl-table.csv
           done
       - name: Commit & push changes
-        uses: actions-js/push@v1
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-        
-          
+          commit_message: Automated data update
