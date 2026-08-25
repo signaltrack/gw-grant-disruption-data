@@ -1,0 +1,27 @@
+on:
+  # TODO: add cron job
+  workflow_dispatch:
+
+name: archive-data.yaml
+
+# permissions: read-all # Not sure if necessary
+
+jobs:
+  archive-data:
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
+      - name: Download CSVs
+        run: |
+          foreach agency ( "nih" "ahrq" "cdc" "epa" "samhsa" )
+            wget -ba -O data/$agency.csv https://data.grant-witness.us/$agency/dl-table.csv
+          end
+      - name: Commit & push changes
+        uses: actions-js/push@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+        
+          
