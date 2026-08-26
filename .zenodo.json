@@ -15,11 +15,13 @@
     {
       "name": "Scott, Eric R.",
       "orcid": "0000-0002-7430-7879",
-      "affiliation": "Grant Witness"
+      "affiliation": "Grant Witness",
+      "type": "DataManager"
     },
     {
       "name": "Shan, Miridula",
-      "orcid": "0000-0003-4613-2669"
+      "orcid": "0000-0003-4613-2669",
+      "type": "ProjectMember"
     },
     {
       "name": "Mairson, Emma",
@@ -41,7 +43,7 @@
   "title": "Grant Witness Federal Grant Terminations",
   "description": "Data on disrupted and restored federal grants compiled by the Grant Witness team.  See grantwitness.org for more on our methods.",
   "upload_type": "dataset",
-  "license": "cc0-1.0",
+  "license": "CC0-1.0",
   "version": "2026-08-26.2",
   "keywords": [
     "NSF",
@@ -51,5 +53,5 @@
     "EPA",
     "SAMHSA"
   ],
-  "release_date": "2026-08-26"
+  "publication_date": "2026-08-26"
 }
