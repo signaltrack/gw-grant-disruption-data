@@ -50,6 +50,18 @@ jobs:
       
       - uses: WyriHaximus/github-action-get-previous-tag@v2
         id: previous-release
+      
+      - name: debug
+        env:
+          DATE: ${{ steps.date.outputs.date }}
+          PREV_TAG: ${{ steps.previous-release.outputs.tag }}
+          EQUAL: ${{ env.DATE == env.PREV_TAG }}
+          INCREMENTED: ${{ join(steps.date.outputs.date, '(1)')}}
+        run: |
+          echo $DATE\
+          echo $PREV_TAG\
+          echo $EQUAL\
+          echo $INCREMENTED
 
       - name: Create release
         env: 
