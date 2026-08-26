@@ -1,0 +1,55 @@
+{
+  "creators": [
+    {
+      "name": "Ross, Noam",
+      "orcid": "0000-0002-2136-0000",
+      "affiliation": "Grant Witness",
+      "type": "ProjectLeader"
+    },
+    {
+      "name": "Delaney, Scott",
+      "orcid": "0000-0002-0813-018X",
+      "affiliation": "Grant Witness",
+      "type": "ProjectLeader"
+    },
+    {
+      "name": "Scott, Eric R.",
+      "orcid": "0000-0002-7430-7879",
+      "affiliation": "Grant Witness"
+    },
+    {
+      "name": "Shan, Miridula",
+      "orcid": "0000-0003-4613-2669"
+    },
+    {
+      "name": "Mairson, Emma",
+      "orcid": "0009-0003-2271-6739"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Kaczmarek, Ursula"
+    },
+    {
+      "name": "Clawson, James",
+      "orcid": "0009-0008-6756-0607"
+    },
+    {
+      "name": "Berg, Jeremy"
+    }
+  ],
+  "title": "Grant Witness Federal Grant Terminations",
+  "description": "Data on disrupted and restored federal grants compiled by the Grant Witness team.  See grantwitness.org for more on our methods.",
+  "upload_type": "dataset",
+  "license": "cc0-1.0",
+  "version": "2026-08-26.2",
+  "keywords": [
+    "NSF",
+    "NIH",
+    "AHRQ",
+    "CDC",
+    "EPA",
+    "SAMHSA"
+  ],
+  "release_date": "2026-08-26"
+}
