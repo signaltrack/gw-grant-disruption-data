@@ -56,7 +56,7 @@ jobs:
           DATE: ${{ steps.date.outputs.date }}
           PREV_TAG: ${{ steps.previous-release.outputs.tag }}
           EQUAL: ${{ env.DATE == env.PREV_TAG }}
-          INCREMENTED: ${{ join(steps.date.outputs.date, '(1)')}}
+          INCREMENTED: ${{ steps.date.outputs.date }} (1)
         run: |
           echo "date: $DATE\nprevious tag: $PREV_TAG\nare they equal: $EQUAL\nnew version: $INCREMENTED"
 
