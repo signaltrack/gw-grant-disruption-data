@@ -48,27 +48,8 @@ jobs:
           commit_message: Automated data update
           file_pattern: 'data/*'
       
-      - uses: WyriHaximus/github-action-get-previous-tag@v2
-        id: previous-release
-      
-      # - name: debug
-      #   env:
-      #     DATE: ${{ steps.date.outputs.date }}
-      #     PREV_TAG: ${{ steps.previous-release.outputs.tag }}
-      #     EQUAL: ${{ env.DATE == env.PREV_TAG }}
-      #     INCREMENTED: ${{ format('{0}.2', steps.date.outputs.date) }}
-      #   run: |
-      #     echo "date: $DATE\nprevious tag: $PREV_TAG\nare they equal: $EQUAL\nnew version: $INCREMENTED"
-
       - name: Create release
-        env: 
-          NEW_TAG: ${{ format('{0}.2', steps.date.outputs.date) }}
-          # NEW_TAG: |
-          #   ${{ case(
-          #     steps.date.outputs.date == steps.previous-release.outputs.tag, format('{0}.1', steps.date.outputs.date),
-          #     steps.date.outputs.date
-          #   ) }}
         uses: softprops/action-gh-release@v3
         with:
-          tag_name: ${{ env.NEW_TAG }}
+          tag_name: ${{ steps.date.outputs.date }}
         
