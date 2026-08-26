@@ -56,7 +56,7 @@ jobs:
           DATE: ${{ steps.date.outputs.date }}
           PREV_TAG: ${{ steps.previous-release.outputs.tag }}
           EQUAL: ${{ env.DATE == env.PREV_TAG }}
-          INCREMENTED: ${{ steps.date.outputs.date }} (1)
+          INCREMENTED: ${{ format('{0} (1)', steps.date.outputs.date) }}
         run: |
           echo "date: $DATE\nprevious tag: $PREV_TAG\nare they equal: $EQUAL\nnew version: $INCREMENTED"
 
@@ -64,7 +64,7 @@ jobs:
         env: 
           NEW_TAG: |
             ${{ case(
-              steps.date.outputs.date == steps.previous-release.outputs.tag, join(steps.date.outputs.date , '(1)'),
+              steps.date.outputs.date == steps.previous-release.outputs.tag, format('{0} (1)', steps.date.outputs.date),
               steps.date.outputs.date
             ) }}
         uses: softprops/action-gh-release@v3
