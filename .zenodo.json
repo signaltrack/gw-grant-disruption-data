@@ -40,13 +40,12 @@
   "description": "Data on disrupted and restored federal grants compiled by the Grant Witness team.  See grantwitness.org for more on our methods.",
   "upload_type": "dataset",
   "license": "CC0-1.0",
-  "version": "2026-08-26.2",
   "keywords": [
     "NSF",
     "NIH",
-    "AHRQ",
-    "CDC",
     "EPA",
+    "CDC",
+    "AHRQ",
     "SAMHSA"
   ],
   "publication_date": "2026-08-26"
