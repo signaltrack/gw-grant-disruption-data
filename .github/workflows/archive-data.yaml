@@ -58,10 +58,7 @@ jobs:
           EQUAL: ${{ env.DATE == env.PREV_TAG }}
           INCREMENTED: ${{ join(steps.date.outputs.date, '(1)')}}
         run: |
-          echo $DATE\
-          echo $PREV_TAG\
-          echo $EQUAL\
-          echo $INCREMENTED
+          echo "date: $DATE\nprevious tag: $PREV_TAG\nare they equal: $EQUAL\nnew version: $INCREMENTED"
 
       - name: Create release
         env: 
