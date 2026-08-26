@@ -47,14 +47,14 @@ jobs:
           commit_message: Automated data update
           file_pattern: 'data/*'
       
-      - uses: sammcoe/get-previous-release-action@v1
+      - uses: WyriHaximus/github-action-get-previous-tag@v2
         id: previous-release
 
       - name: Create release
         env: 
           NEW_TAG: |
             ${{ case(
-              steps.date.outputs.date == steps.previous-release.outputs.release, join(steps.date.outputs.date , '(1)'),
+              steps.date.outputs.date == steps.previous-release.outputs.tag, join(steps.date.outputs.date , '(1)'),
               steps.date.outputs.date
             ) }}
         uses: softprops/action-gh-release@v3
