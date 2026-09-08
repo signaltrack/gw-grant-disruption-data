@@ -26,17 +26,20 @@
   ],
   "contributors": [
     {
-      "name": "Kaczmarek, Ursula"
+      "name": "Kaczmarek, Ursula",
+      "type": "ProjectMember"
     },
     {
       "name": "Clawson, James",
-      "orcid": "0009-0008-6756-0607"
+      "orcid": "0009-0008-6756-0607",
+      "type": "ProjectMember"
     },
     {
-      "name": "Berg, Jeremy"
+      "name": "Berg, Jeremy",
+      "type": "ProjectMember"
     }
   ],
-  "title": "Grant Witness Federal Grant Terminations",
+  "title": "Federal Grant Terminations under the Trump Administration, 2025–Present",
   "description": "Data on disrupted and restored federal grants compiled by the Grant Witness team.  See grantwitness.org for more on our methods.",
   "upload_type": "dataset",
   "license": "CC0-1.0",
