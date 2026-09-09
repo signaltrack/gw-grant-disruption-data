@@ -30,7 +30,7 @@ jobs:
       # see if Zenodo sets it to the upload date
       - name: Update release date
         run: | 
-          cat .zenodo.json | jq --arg DATE "$DATE" '.publication_date |= $DATE' > .zenodo.json &&
+          cat .zenodo.json | jq --arg DATE "$DATE" '.publication_date |= $DATE' > .zenodo.json.tmp &&
           mv .zenodo.json.tmp .zenodo.json
         env:
           DATE: ${{ steps.date.outputs.date }}
