@@ -1,6 +1,14 @@
 on:
-  # TODO: add cron job
-  workflow_dispatch: # TODO: add controls of whether to make the release or not
+  schedule:
+    - cron: "0 16 * * 1"
+  workflow_dispatch: 
+    inputs:
+      make_release: 
+        description: "Make release? (if FALSE, just pull data and commit it)"
+        type: boolean
+      release_tag:
+        description: "Release tag to use (increment to <date>.1 if there is already a release from today)"
+        type: string
 
 name: archive-data.yaml
 
