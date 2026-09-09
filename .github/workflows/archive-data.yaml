@@ -7,7 +7,7 @@ on:
         description: "Make release? (or just pull data and commit it)"
         type: boolean
       release_tag:
-        description: "Release tag to use (e.g. 2026-01-01.1 for a second release on that day)"
+        description: "Release tag to use (leave blank for today's date or increment to e.g. 2026-01-01.1 for a second release of the day)"
         type: string
 
 name: archive-data.yaml
@@ -55,7 +55,7 @@ jobs:
           file_pattern: 'data/*'
       
       - name: Create release
-        if: ${{ github.event.inputs.make_release || 'true'}}
+        if: ${{ (github.event_name=='workflow_dispatch' && github.event.inputs.make_release) || 'true' }}
         uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.event.inputs.release_tag || steps.date.outputs.date }}
