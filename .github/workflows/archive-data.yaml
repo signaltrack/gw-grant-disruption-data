@@ -4,10 +4,10 @@ on:
   workflow_dispatch: 
     inputs:
       make_release: 
-        description: "Make release? (if FALSE, just pull data and commit it)"
+        description: "Make release? (or just pull data and commit it)"
         type: boolean
       release_tag:
-        description: "Release tag to use (increment to <date>.1 if there is already a release from today)"
+        description: "Release tag to use (e.g. 2026-01-01.1 for a second release on that day)"
         type: string
 
 name: archive-data.yaml
