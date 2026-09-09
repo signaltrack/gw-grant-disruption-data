@@ -53,9 +53,11 @@ jobs:
         with:
           commit_message: Automated data update
           file_pattern: 'data/*'
-      
+      - name: debug
+        run: |
+          echo $${ github.event_name }
       - name: Create release
-        if: ${{ (github.event_name=='workflow_dispatch' && github.event.inputs.make_release) || 'true' }}
+        if: ${{ (github.event_name=='workflow_dispatch' && github.event.inputs.make_release == 'true') || github.event_name=='schedule' }}
         uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ github.event.inputs.release_tag || steps.date.outputs.date }}
